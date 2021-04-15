@@ -3,8 +3,19 @@ package collections
 class Filter {
 }
 val nos = listOf<Int>(1,-2,3,4,-5,-9)
+val evenOdd = nos.partition { it % 2 ==0}
+val bagFruits = listOf<String>("apple","banana","chicku")
+val bagClothes = listOf<String>("shirt","pant","tie")
+val cart = listOf(bagFruits, bagClothes)
+val mapBag = cart.map { it }
+val flatMapBag = cart.flatMap { it }
 val words = listOf<String>("first","element","of","found","the","list","last")
 fun main() {
+    println(mapBag)
+    println(flatMapBag)
+    println("even nos are ${evenOdd.first}")
+    println("odd nos are ${evenOdd.second}")
+
     println("${nos.count()} digits")
     println("${nos.count { it %2 ==0 }} even numbers")
     val first = words.find { it.startsWith("f") }
