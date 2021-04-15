@@ -2,14 +2,14 @@ package classes
 
 
 fun rentPrice(normalDay : Int, festiveDays : Int){
-        val dayRates = object {
-            var standard: Int = 20;
-            var festive: Int = 40
-        }
-
-        val total = dayRates.standard + dayRates.festive
-        println("Total price = $total")
+    val dayRates = object {//in java anonymous inner class
+    var standard: Int = 30;
+        var festive: Int = 50
     }
-    fun main() {
-        rentPrice(10,2)
+
+    val total = dayRates.standard * normalDay + dayRates.festive * festiveDays
+    println("Total price = $total")
+}
+fun main() {
+    rentPrice(10,2)
 }

@@ -2,11 +2,11 @@ package classes
 
 import java.util.*
 
-object  TemplateClass {
-    fun getNumber(){
-        var objRandom = Random()
-        println(objRandom.nextInt(90))
-    }
+object  TemplateClass {//singleton
+fun getNumber(){
+    var objRandom = Random()
+    println(objRandom.nextInt(90))
+}
 }
 
 fun main() {
@@ -15,6 +15,6 @@ fun main() {
 
 
 
-    //t1.getNumber()//get no is an instance method
-    //t2.getNumber()
+    // t1.getNumber()//get no is an instance method
+    // t2.getNumber()
 }
