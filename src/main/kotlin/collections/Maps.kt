@@ -11,4 +11,6 @@ fun main() {
     passedStudents.put(3,"alekhya")
     println(passedStudents)
     println(passedStudents.keys)
+    val nameWithA = passedStudents.filterValues { it.startsWith("a") }
+    println(nameWithA)
 }
